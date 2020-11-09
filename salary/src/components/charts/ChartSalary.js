@@ -5,6 +5,7 @@ const ChartSalary = () => {
     const [chartData, setChartData] = useState()
 
     const chart = () => {
+        // dummy data
         setChartData({
             labels: ['$50K', '$75K', '$100K', '$125K', '$150K', '$175K', '$200K'],
             datasets: [
