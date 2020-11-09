@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './layout.css';
 
 // Ant Design 
 import { Layout, Menu } from 'antd';
@@ -28,7 +28,7 @@ class SiderDemo extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout >
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
