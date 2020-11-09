@@ -1,4 +1,3 @@
-import { Divider } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
@@ -28,8 +27,10 @@ const ChartSalary = () => {
     return (
         <div className="chartSalary">
             <h1>Salary Chart</h1>
-            <div>
-                <Line data={chartData}/>
+            <div style= {{height: "500px", width: "500px"}}>
+                <Line data={chartData} options= {{
+                    responsive: true
+                }} />
             </div>
         </div>
     )
