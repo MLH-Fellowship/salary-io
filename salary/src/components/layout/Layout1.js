@@ -1,5 +1,6 @@
 import React from 'react';
-import './layout.css';
+import './Layout1.css';
+import ChartSalary from '../charts/ChartSalary'
 
 // Ant Design 
 import { Layout, Menu } from 'antd';
@@ -15,7 +16,7 @@ import {
 // Ant Design Constants
 const { Header, Sider, Content } = Layout;
 
-class SiderDemo extends React.Component {
+class Layout1 extends React.Component {
   state = {
     collapsed: false,
   };
@@ -28,7 +29,7 @@ class SiderDemo extends React.Component {
 
   render() {
     return (
-      <Layout >
+      <Layout>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
@@ -57,8 +58,9 @@ class SiderDemo extends React.Component {
               padding: 24,
               minHeight: 280,
             }}
-          >
+            >
             Insert Graph Here
+            <ChartSalary />
           </Content>
         </Layout>
       </Layout>
@@ -66,4 +68,4 @@ class SiderDemo extends React.Component {
   }
 }
 
-export default SiderDemo;
+export default Layout1;

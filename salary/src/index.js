@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import SliderDemo from './components/layout/layout';
+import Layout1 from './components/layout/Layout1';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <SliderDemo />,
+    <Layout1 />,
   </React.StrictMode>,
   document.getElementById('root')
 );
