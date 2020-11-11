@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './Layout1.css';
 import ChartSalary from '../charts/ChartSalary'
+import Form from '../Form';
+import {withRouter} from 'react-router-dom';
 
 // Ant Design 
 import { Layout, Menu } from 'antd';
@@ -17,6 +19,12 @@ import {
 const { Header, Sider, Content } = Layout;
 
 class Layout1 extends React.Component {
+
+  constructor(props){
+    super(props);
+    console.log(props);
+  }
+
   state = {
     collapsed: false,
   };
@@ -79,4 +87,4 @@ class Layout1 extends React.Component {
   }
 }
 
-export default Layout1;
+export default withRouter(Layout1);

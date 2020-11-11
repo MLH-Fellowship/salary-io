@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.2.0",
     "antd": "^4.8.0",
     "chart.js": "^2.9.4",
+    "craco": "0.0.3",
     "craco-less": "^1.17.0",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.11.1",
