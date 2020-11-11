@@ -46,5 +46,5 @@ def predict_salary(yearsofexperience,yearsatcompany,location,title,gender):
 
     # predict salary from the model
     result = model.predict(parameters)
-    print(result)
-    return str(result[0])
+
+    return "{:.2f}".format(result[0])

@@ -79,9 +79,10 @@ class Layout1 extends React.Component {
               minHeight: 280,
             }}
             >
-            Insert Graph Here
-            <p>An example of salary prediction call {this.state.salary}.</p>
-            <ChartSalary />
+            {/* Insert Graph Here */}
+            {/* <p>An example of salary prediction call {this.state.salary}.</p> */}
+            {/* <ChartSalary /> */}
+            <h2>According to our estimate, you could earn {this.state.salary}k/year!</h2>
           </Content>
         </Layout>
       </Layout>

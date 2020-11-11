@@ -33,7 +33,6 @@ class Form extends React.Component {
       });
     };
     success();
-    console.log("LOL");
     this.browserHistory.push({
       'pathname': '/predict',
       'yearsofexperience': this.state.yearsofexperience,
@@ -136,6 +135,7 @@ class Form extends React.Component {
           <span>Gender</span>
           <div><select style={{ borderRadius: 5 }} type="option" name='gender' value={this.state.gender} onChange={this.handleChange}>
             <option value="Male">Male</option>
+            <option value="Female">Female</option>
             <option value="Other">Other</option>
           </select>
           </div>
