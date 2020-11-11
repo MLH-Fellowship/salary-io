@@ -6,6 +6,9 @@ import {
 } from 'antd';
 
 const SalaryForm = () => {
+  const initialValues = {
+
+  }
 
   return (
     <>
@@ -27,9 +30,22 @@ const SalaryForm = () => {
             <Select.Option value="demo">Demo</Select.Option>
           </Select>
         </Form.Item>
-        <Form.Item label="Location">
+        <Form.Item label="Years at Company">
           <Select>
             <Select.Option value="demo">Demo</Select.Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Location">
+          <Select>
+            <Select.Option value="Location_1">Location_1</Select.Option>
+            <Select.Option value="Location_2">Location_2</Select.Option>
+            <Select.Option value="Location_3">Location_3</Select.Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Gender">
+          <Select>
+            <Select.Option value="Male">Male</Select.Option>
+            <Select.Option value="Female">Female</Select.Option>
           </Select>
         </Form.Item>
         <Form.Item label="Button">
