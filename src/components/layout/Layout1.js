@@ -38,10 +38,10 @@ class Layout1 extends React.Component {
   };
 
   componentDidMount() {
-    // This is an example of what the url would look like
-    // I replace space as underscore for title
+    // Show the result of the estimate from the model
     fetch(`/${this.state.yearsofexperience}/${this.state.yearsatcompany}/${this.state.location}/${this.state.title}/${this.state.gender}`)
     .then(res => res.json()).then(data => {
+      console.log(data);
       this.setState({salary: data})
         });
     

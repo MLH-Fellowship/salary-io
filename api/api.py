@@ -31,11 +31,11 @@ columns = ['yearsofexperience', 'yearsatcompany', 'location_Arlington,VA', 'loca
 def predict_salary(yearsofexperience,yearsatcompany,location,title,gender):
     parameters = [int(yearsofexperience),int(yearsatcompany)]
     for i in range(2, len(columns)):
-        if columns[0] == 'l' and columns == 'location_' + location:
+        if columns[i][0] == 'l' and columns[i] == 'location_' + location:
             parameters.append(1)
-        elif columns[0] == 't' and columns == 'title_' + title:
+        elif columns[i][0] == 't' and columns[i] == 'title_' + title:
             parameters.append(1)
-        elif columns[0] == 'g' and columns == 'gender_' + gender:
+        elif columns[i][0] == 'g' and columns[i] == 'gender_' + gender:
             parameters.append(1)
         else:
             parameters.append(0) 
