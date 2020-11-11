@@ -5,7 +5,7 @@ import Form from '../Form';
 import {withRouter} from 'react-router-dom';
 
 // Ant Design 
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Button } from 'antd';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -33,6 +33,7 @@ class Layout1 extends React.Component {
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
+      clicked: false,
       salary: 0,
     });
   };
@@ -45,6 +46,9 @@ class Layout1 extends React.Component {
       this.setState({salary: data})
         });
     
+  }
+  handleClick() {
+    this.setState({clicked: true});
   }
 
   render() {
@@ -83,6 +87,8 @@ class Layout1 extends React.Component {
             {/* <p>An example of salary prediction call {this.state.salary}.</p> */}
             {/* <ChartSalary /> */}
             <h2>According to our estimate, you could earn {this.state.salary}k/year!</h2>
+            <Button style={{ backgroundColor: "#00134d", color: "#ffffff", borderRadius: 10}} onClick={this.handleClick.bind(this)}>See where you stand in the bigger picture</Button>
+            <div style={{marginTop: 50}}>{this.state.clicked && <ChartSalary />}</div>
           </Content>
         </Layout>
       </Layout>
