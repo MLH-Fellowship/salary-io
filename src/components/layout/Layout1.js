@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Layout1.css';
 import ChartSalary from '../charts/ChartSalary'
+import SalaryForm from '../forms/FormCalculator'
 
 // Ant Design 
 import { Layout, Menu } from 'antd';
@@ -69,9 +70,10 @@ class Layout1 extends React.Component {
               minHeight: 280,
             }}
             >
-            Insert Graph Here
-            <p>An example of salary prediction call {this.state.salary}.</p>
-            <ChartSalary />
+            <div className="wrapper">
+              <SalaryForm className="salaryForm wrap-child"/>
+              <ChartSalary className="chartSalary wrap-child"/>
+            </div>
           </Content>
         </Layout>
       </Layout>
