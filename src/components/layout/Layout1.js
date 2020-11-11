@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Layout1.css';
 import ChartSalary from '../charts/ChartSalary'
 
@@ -24,8 +24,18 @@ class Layout1 extends React.Component {
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
+      salary: 0,
     });
   };
+
+  componentDidMount() {
+    // This is an example of what the url would look like
+    // I replace space as underscore for title
+    fetch('/12/10/Seattle,WA/Product_Designer/Female').then(res => res.json()).then(data => {
+      this.setState({salary: data})
+        });
+    
+  }
 
   render() {
     return (
@@ -60,6 +70,7 @@ class Layout1 extends React.Component {
             }}
             >
             Insert Graph Here
+            <p>An example of salary prediction call {this.state.salary}.</p>
             <ChartSalary />
           </Content>
         </Layout>
