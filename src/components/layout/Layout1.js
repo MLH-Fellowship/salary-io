@@ -57,10 +57,10 @@ class Layout1 extends React.Component {
               Salary
             </Menu.Item>
             <Menu.Item key="2" icon={<FileTextOutlined />}>
-              Jobs
+              Jobs (Coming Soon!)
             </Menu.Item>
             <Menu.Item key="3" icon={<AppstoreOutlined />}>
-              Resources
+              Resources (Coming Soon!)
             </Menu.Item>
           </Menu>
         </Sider>
