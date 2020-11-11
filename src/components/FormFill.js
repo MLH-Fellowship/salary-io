@@ -105,7 +105,7 @@ function FormFill() {
 
         <Form.Item>
           <Button type="primary" htmlType="submit" style={{ background: "#19e07d", borderColor: "#19e07d" }}>
-            Submit
+            Predict Salary
         </Button>
         </Form.Item>
       </Form>
