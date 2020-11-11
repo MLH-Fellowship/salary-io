@@ -48,32 +48,32 @@ class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          <span>Years of experience</span>
-          <div><input style={{ borderRadius: 5 }} type="text" name='yearsofexperience' value={this.state.yearsofexperience} onChange={this.handleChange} /></div>
+          <span style={{fontSize: 16}}>Years of experience</span>
+          <div style={{ marginBottom: 20}}><input style={{ width: '300px', borderRadius: 5 }} type="text" name='yearsofexperience' value={this.state.yearsofexperience} onChange={this.handleChange} /></div>
         </label>
         <label>
-          <span>Years at company</span>
-          <div><input style={{ borderRadius: 5 }} type="text" name='yearsatcompany' value={this.state.yearsatcompany} onChange={this.handleChange} /></div>
+          <span style={{fontSize: 16}}>Years at company</span>
+          <div style={{ marginBottom: 20}}><input style={{ width: '300px', borderRadius: 5}} type="text" name='yearsatcompany' value={this.state.yearsatcompany} onChange={this.handleChange} /></div>
         </label>
         <label>
-          <span>Title</span>
-          <div><select style={{ borderRadius: 5 }} type="select" name='title' value={this.state.title} onChange={this.handleChange}>
-            <option value="Data_Scientist">Data_Scientist</option>
-            <option value="Hardware_Engineer">Hardware_Engineer</option>
-            <option value="Management_Consultant">Management_Consultant</option>
+          <span style={{fontSize: 16}}>Title</span>
+          <div style={{ marginBottom: 20}}><select style={{ width: '300px', borderRadius: 5, borderWidth: 2 }} type="select" name='title' value={this.state.title} onChange={this.handleChange}>
+            <option value="Data_Scientist">Data Scientist</option>
+            <option value="Hardware_Engineer">Hardware Engineer</option>
+            <option value="Management_Consultant">Management Consultant</option>
             <option value="Marketing">Marketing</option>
-            <option value="Product_Designer">Product_Designer</option>
-            <option value="Product_Manager">Product_Manager</option>
-            <option value="Software_Engineer">Software_Engineer</option>
-            <option value="Software_Engineering_Manager">Software_Engineering_Manager</option>
-            <option value="Solution_Architect">Solution_Architect</option>
-            <option value="Technical_Program_Manager">Technical_Program_Manager</option>
+            <option value="Product_Designer">Product Designer</option>
+            <option value="Product_Manager">Product Manager</option>
+            <option value="Software_Engineer">Software Engineer</option>
+            <option value="Software_Engineering_Manager">Software Engineering Manager</option>
+            <option value="Solution_Architect">Solution Architect</option>
+            <option value="Technical_Program_Manager">Technical Program Manager</option>
           </select>
           </div>
         </label>
         <label>
-          <span>Location</span>
-          <div><select style={{ borderRadius: 5 }} type="option" name='location' value={this.state.location} onChange={this.handleChange}>
+          <span style={{fontSize: 16}}>Location</span>
+          <div style={{ marginBottom: 20}}><select style={{ width: '300px', borderRadius: 5, borderWidth: 2 }} type="option" name='location' value={this.state.location} onChange={this.handleChange}>
             <option value="Arlington,VA">Arlington,VA</option>
             <option value="Atlanta,GA">Atlanta,GA</option>
             <option value="Austin,TX">Austin,TX</option>
@@ -132,15 +132,15 @@ class Form extends React.Component {
           </div>
         </label>
         <label>
-          <span>Gender</span>
-          <div><select style={{ borderRadius: 5 }} type="option" name='gender' value={this.state.gender} onChange={this.handleChange}>
+          <span style={{fontSize: 16}}>Gender</span>
+          <div style={{ marginBottom: 20}}><select style={{ width: '300px', borderRadius: 5, borderWidth: 2}} type="option" name='gender' value={this.state.gender} onChange={this.handleChange}>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
           </select>
           </div>
         </label>
-        <input type="submit" value="Submit" style={{ backgroundColor: "#00134d", color: "#ffffff", marginTop: 10 }} />
+        <input type="submit" value="Predict" style={{ backgroundColor: "#00134d", color: "#ffffff", width: 100, height: 40 }} />
       </form>
     );
   }
