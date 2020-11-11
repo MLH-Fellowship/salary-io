@@ -5,11 +5,11 @@ import { Button } from 'antd';
 
 function SalaryForm(props) {
   const { handleSubmit, control } = useForm();
-  const title = ["Product Management", "Developer Operations (DevOps)", "Quality Assurance (QA)", "Information Technology (IT)", "Project Management", "Data Analytics", "Software Engineering", "Design", "Engineering Management"];
+  const title = ["Data_Scientist", "Hardware_Engineer", "Management_Consultant", "Marketing", "Product_Designer", "Product_Manager", "Software_Engineer", "Software_Engineering_Manager", "Solution_Architect", "Technical_Program_Manager"];
   const yearsOfExperience = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"];
   const yearsAtCompany = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"];
-  const location = ["Seattle", "Washington D.C.", "New York", "Los Angeles", "Toronto", "London", "SF Bay Area"];
-  const gender = ["Male", "Female"];
+  const location = ["Arlington,VA", "Atlanta,GA", "Austin,TX", "Bangalore,KA,India", "Bellevue,WA", "Bengaluru,KA,India", "Berlin,BE,Germany", "Boston,MA", "Boulder,CO", "Cambridge,MA", "Chicago,IL", "Cupertino,CA", "Dallas,TX", "Denver,CO", "Dublin,DN,Ireland", "Herndon,VA", "Hillsboro,OR", "Houston,TX", "Hyderabad,TS,India", "Irvine,CA", "Jersey City,NJ", "Kirkland,WA", "London,EN,United Kingdom", "Los Angeles,CA", "Los Gatos,CA", "Menlo Park,CA", "Minneapolis,MN", "Moscow,MC,Russia", "Mountain View,CA", "New York,NY", "Palo Alto,CA", "Philadelphia,PA", "Phoenix,AZ", "Pittsburgh,PA", "Plano,TX", "Pleasanton,CA", "Portland,OR", "Raleigh,NC", "Redmond,WA", "Redwood City,CA", "San Bruno,CA", "San Diego,CA", "San Francisco,CA", "San Jose,CA", "Santa Clara,CA", "Seattle,WA", "Singapore,SG,Singapore", "Sunnyvale,CA", "Sydney,NS,Australia", "Tel Aviv,TA,Israel", "Toronto,ON,Canada", "Vancouver,BC,Canada", "Washington,DC", "Zurich,ZH,Switzerland"];
+  const gender = ["Male", "Other"];
 
 
   const onSubmit = (data) => {
