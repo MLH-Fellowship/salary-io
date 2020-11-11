@@ -27,4 +27,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /api/__pycache__
+.ipynb_checkpoints
 salary/api/__pycache__/api.cpython-38.pyc
