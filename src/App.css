@@ -1,14 +1,29 @@
-/* This is from the default React CSS */
-
 .input-group {
-  display: inline-flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 0px 20px;
+  margin-bottom: 15px;
 }
 
 .label {
   font-weight: 600;
   color: black;
 } 
+
+form {
+  float: right;
+  height: 50vh;
+  width: 25vw;
+  margin-top: 5%;
+}
+
+.chart {
+    height: 75vh;
+    width: 50vw;
+    float: left;
+}
+
+form .chart {
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+}

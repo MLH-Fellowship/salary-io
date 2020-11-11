@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import Layout1 from './components/layout/Layout1'
+import './App.css';
 
 
 class App extends React.Component {
