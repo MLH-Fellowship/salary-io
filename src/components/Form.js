@@ -1,7 +1,7 @@
 import React from "react";
 import { message } from 'antd';
 import { createBrowserHistory } from 'history';
-import Layout1 from './layout/Layout1'
+// import Layout1 from './layout/Layout1'
 
 
 class Form extends React.Component {
