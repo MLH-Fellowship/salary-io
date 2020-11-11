@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
+import "./ChartSalary.css"
 
 const ChartSalary = () => {
     const [chartData, setChartData] = useState()
@@ -26,7 +27,7 @@ const ChartSalary = () => {
     }, [])
 
     return (
-        <div className="chartSalary">
+        <div className="chart">
             <h1>Salary Chart</h1>
             <div style= {{height: "400px", width: "900px"}}>
                 <Line data={chartData} options= {{
