@@ -10,11 +10,17 @@
     "@testing-library/user-event": "^12.2.0",
     "antd": "^4.8.0",
     "chart.js": "^2.9.4",
+    "craco": "0.0.3",
     "craco-less": "^1.17.0",
+    "history": "^5.0.0",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "^17.0.1",
+<<<<<<< HEAD
+    "react-router-dom": "^5.2.0",
+=======
     "react-hook-form": "^6.11.0",
+>>>>>>> 37bb47e1c39a59ebfa83e5c0b330a4f6b02172a7
     "react-scripts": "4.0.0",
     "recharts": "^1.8.5",
     "web-vitals": "^0.2.4"

@@ -14,7 +14,7 @@ const ChartSalary = () => {
                     label: 'Salary Level',
                     data: [30, 50, 100, 89, 200, 99, 80],
                     backgroundColor: [
-                        'rbga(75, 192, 192, 0.6)'
+                        'rgba(0, 19, 77, 1)'
                     ],
                     borderWidth: 4
                 }
@@ -29,7 +29,7 @@ const ChartSalary = () => {
     return (
         <div className="chart">
             <h1>Salary Chart</h1>
-            <div>
+            <div style= {{height: "400px", width: "900px"}}>
                 <Line data={chartData} options= {{
                     responsive: true
                 }} />

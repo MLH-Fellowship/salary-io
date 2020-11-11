@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import './Layout1.css';
 import ChartSalary from '../charts/ChartSalary'
-import SalaryForm from '../forms/FormCalculator'
+import Form from '../Form';
+import {withRouter} from 'react-router-dom';
 
 // Ant Design 
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Button } from 'antd';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -18,6 +19,13 @@ import {
 const { Header, Sider, Content } = Layout;
 
 class Layout1 extends React.Component {
+
+  constructor(props){
+    super(props);
+    const queryString = require('query-string');
+    this.state = queryString.parse(props.location.search);
+  }
+
   state = {
     collapsed: false,
   };
@@ -25,17 +33,22 @@ class Layout1 extends React.Component {
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
+      clicked: false,
       salary: 0,
     });
   };
 
   componentDidMount() {
-    // This is an example of what the url would look like
-    // I replace space as underscore for title
-    fetch('/12/10/Seattle,WA/Product_Designer/Female').then(res => res.json()).then(data => {
+    // Show the result of the estimate from the model
+    fetch(`/${this.state.yearsofexperience}/${this.state.yearsatcompany}/${this.state.location}/${this.state.title}/${this.state.gender}`)
+    .then(res => res.json()).then(data => {
+      console.log(data);
       this.setState({salary: data})
         });
     
+  }
+  handleClick() {
+    this.setState({clicked: true});
   }
 
   render() {
@@ -48,10 +61,10 @@ class Layout1 extends React.Component {
               Salary
             </Menu.Item>
             <Menu.Item key="2" icon={<FileTextOutlined />}>
-              Jobs
+              Jobs (Coming Soon!)
             </Menu.Item>
             <Menu.Item key="3" icon={<AppstoreOutlined />}>
-              Resources
+              Resources (Coming Soon!)
             </Menu.Item>
           </Menu>
         </Sider>
@@ -70,10 +83,12 @@ class Layout1 extends React.Component {
               minHeight: 280,
             }}
             >
-            <div className="wrapper">
-              <SalaryForm className="salaryForm wrap-child"/>
-              <ChartSalary className="chartSalary wrap-child"/>
-            </div>
+            {/* Insert Graph Here */}
+            {/* <p>An example of salary prediction call {this.state.salary}.</p> */}
+            {/* <ChartSalary /> */}
+            <h2>According to our estimate, you could earn {this.state.salary}k/year!</h2>
+            <Button style={{ backgroundColor: "#00134d", color: "#ffffff", borderRadius: 10}} onClick={this.handleClick.bind(this)}>See where you stand in the bigger picture</Button>
+            <div style={{marginTop: 50}}>{this.state.clicked && <ChartSalary />}</div>
           </Content>
         </Layout>
       </Layout>
@@ -81,4 +96,4 @@ class Layout1 extends React.Component {
   }
 }
 
-export default Layout1;
+export default withRouter(Layout1);
