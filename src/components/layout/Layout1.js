@@ -60,9 +60,9 @@ class Layout1 extends React.Component {
               minHeight: 280,
             }}
             >
-            <div id="wrapper">
-              <SalaryForm className="salaryForm"/>
-              <ChartSalary className="chartSalary"/>
+            <div className="wrapper">
+              <SalaryForm className="salaryForm wrap-child"/>
+              <ChartSalary className="chartSalary wrap-child"/>
             </div>
           </Content>
         </Layout>
