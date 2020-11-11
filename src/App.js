@@ -11,6 +11,7 @@ function App() {
     <div className='App'>
       <Router>
         <Switch>
+        <Route path="/predict" render={props =>  (<Layout1 {...props}/>)}/>
           <Route path='/' exact component={() => <Home />} />
         </Switch>
       </Router>

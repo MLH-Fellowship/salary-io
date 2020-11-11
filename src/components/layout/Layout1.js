@@ -22,7 +22,8 @@ class Layout1 extends React.Component {
 
   constructor(props){
     super(props);
-    console.log(props);
+    const queryString = require('query-string');
+    this.state = queryString.parse(props.location.search);
   }
 
   state = {
@@ -39,7 +40,8 @@ class Layout1 extends React.Component {
   componentDidMount() {
     // This is an example of what the url would look like
     // I replace space as underscore for title
-    fetch('/12/10/Seattle,WA/Product_Designer/Female').then(res => res.json()).then(data => {
+    fetch(`/${this.state.yearsofexperience}/${this.state.yearsatcompany}/${this.state.location}/${this.state.title}/${this.state.gender}`)
+    .then(res => res.json()).then(data => {
       this.setState({salary: data})
         });
     
