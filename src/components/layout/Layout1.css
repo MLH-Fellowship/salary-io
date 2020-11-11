@@ -1,9 +1,5 @@
 @import "~antd/dist/antd.css";
 
-.salaryForm {
-  width: 500px;
-}
-
 .trigger {
   font-size: 18px;
   line-height: 64px;

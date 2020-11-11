@@ -4,19 +4,16 @@ import { SelectField } from "./FormInputs"
 import { Button } from 'antd';
 
 function SalaryForm(props) {
-  const { handleSubmit, control, reset } = useForm();
+  const { handleSubmit, control } = useForm();
   const title = ["Product Management", "Developer Operations (DevOps)", "Quality Assurance (QA)", "Information Technology (IT)", "Project Management", "Data Analytics", "Software Engineering", "Design", "Engineering Management"];
-  const yearsOfExperience = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"]
-  const yearsAtCompany = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"]
-  const location = ["Seattle", "Washington D.C.", "New York", "Los Angeles", "Toronto", "London", "SF Bay Area"]
-  const gender = ["Male", "Female"]
+  const yearsOfExperience = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"];
+  const yearsAtCompany = ["0-2 years", "2-4 years", "4-6 years", "6-10 years", "10+ years"];
+  const location = ["Seattle", "Washington D.C.", "New York", "Los Angeles", "Toronto", "London", "SF Bay Area"];
+  const gender = ["Male", "Female"];
 
 
   const onSubmit = (data) => {
     console.log(data)
-    setTimeout(() => reset({
-      Title: '',
-    }), 1000);
   };
 
   return (
@@ -25,7 +22,7 @@ function SalaryForm(props) {
         <label className="label">Title: </label>
         <Controller
           as={SelectField(title[0], title)}
-          name="Title"
+          name="title"
           control={control}
           defaultValue=''
         />
@@ -60,7 +57,7 @@ function SalaryForm(props) {
       <div className='input-group'>
         <label className="label">Gender: </label>
         <Controller
-          as={SelectField(gender[1], gender)}
+          as={SelectField(true, gender)}
           name="gender"
           control={control}
           defaultValue=''
@@ -68,7 +65,7 @@ function SalaryForm(props) {
       </div>
       <Button type='primary' htmlType="submit">
         Calculate
-    </Button>
+      </Button>
     </form>
   );
 }
