@@ -1,6 +1,7 @@
 import React from 'react';
 import './Layout1.css';
 import ChartSalary from '../charts/ChartSalary'
+import SalaryForm from '../forms/FormCalculator'
 
 // Ant Design 
 import { Layout, Menu } from 'antd';
@@ -59,8 +60,12 @@ class Layout1 extends React.Component {
               minHeight: 280,
             }}
             >
-            Insert Graph Here
-            <ChartSalary />
+            <div>
+              <SalaryForm className="salaryForm"/>
+            </div>
+            <div>
+              <ChartSalary className="chartSalary"/>
+            </div>
           </Content>
         </Layout>
       </Layout>

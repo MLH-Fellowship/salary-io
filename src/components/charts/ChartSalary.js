@@ -28,7 +28,7 @@ const ChartSalary = () => {
     return (
         <div className="chartSalary">
             <h1>Salary Chart</h1>
-            <div style= {{height: "500px", width: "500px"}}>
+            <div style= {{height: "50vh", width: "50vw"}}>
                 <Line data={chartData} options= {{
                     responsive: true
                 }} />
