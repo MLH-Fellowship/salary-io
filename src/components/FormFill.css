@@ -1,5 +1,13 @@
 @import "~antd/dist/antd.css";
 
+@font-face {
+  font-family: "CoolveticaRg-Regular";
+
+  src: url("./fonts/coolveticarg.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .center {
   display: flex;
   flex-grow: 1;
@@ -8,9 +16,21 @@
   border: 5px solid rgb(26, 224, 125);
 }
 
+.logofont {
+  font-family: 'CoolveticaRg-Regular', Arial, sans-serif;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  justify-content: center;
+  align-items: left;
 }
  
