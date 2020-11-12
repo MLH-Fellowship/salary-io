@@ -1,15 +1,14 @@
-Predict your salary!
-# <div align="center">Predict your salary! </div>
+# <div align="center">Salary.io</div>
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 </p>
 
 ## Motivation
-We always wonder how much money we would be able to earn
+Whether we're job searching or have an offer in hand, knowing what salary we should be paid is a critical part of our career journey. Our tool uses regression modeling to quickly predict a salary estimate based on your position, location, and years of experience.
 
 ## Screenshots
-
+<img src="https://github.com/MLH-Fellowship/salary-io/blob/main/screenshots/screenshot2.png">
 
 
 ## What it does
