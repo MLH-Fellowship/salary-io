@@ -20,7 +20,7 @@ function FormFill() {
   return (
     <>
       <div className='logo' style={{ marginRight: '100px' }}>
-        <h1 style={{ color: 'rgb(26, 224, 125)', fontSize: '64px' }}>Salary.io</h1>
+        <h1 className='logofont' style={{ color: 'rgb(26, 224, 125)', fontSize: '64px' }}>Salary.io</h1>
         <h3>Get a salary estimate in seconds</h3>
       </div>
       <Form
